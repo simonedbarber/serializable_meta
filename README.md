@@ -2,11 +2,11 @@
 
 Serializable Meta allows the developer to specify, for a given model, a custom serialization model along with field mappings. This mechanism thus allows one model to act as another model when it comes to serialization.
 
-[![GoDoc](https://godoc.org/github.com/qor/serializable_meta?status.svg)](https://godoc.org/github.com/qor/serializable_meta)
+[![GoDoc](https://godoc.org/github.com/simonedbarber/serializable_meta?status.svg)](https://godoc.org/github.com/simonedbarber/serializable_meta)
 
 ## Usage
 
-The example herein shows how to manage different kinds of background jobs using https://github.com/qor/serializable_meta.
+The example herein shows how to manage different kinds of background jobs using https://github.com/simonedbarber/serializable_meta.
 
 ### Define serializable model
 
@@ -20,7 +20,7 @@ type QorJob struct {
 }
 ```
 
-Add function `GetSerializableArgumentResource` to the model, so [Serializable Meta](https://github.com/qor/serializable_meta) can know the type of argument. Then define background jobs.
+Add function `GetSerializableArgumentResource` to the model, so [Serializable Meta](https://github.com/simonedbarber/serializable_meta) can know the type of argument. Then define background jobs.
 
 ```go
 func (qorJob QorJob) GetSerializableArgumentResource() *admin.Resource {
